@@ -1,5 +1,41 @@
 # Sistema-para-mapeo-de-interiores-y-asistencia-en-la-navegacion-mediante-TurtleBot-4-TFG
+# Estructura del repositorio
+### `turtlebot4_guidance_system`
 
+Paquete principal del proyecto. Implementa el sistema de guiado autónomo y contiene:
+
+- Lanzadores (`launch`) del sistema completo.
+- Configuración de navegación (`Nav2`, `AMCL`, mapas, RViz, etc.).
+- Interfaz gráfica desarrollada para la selección de destinos.
+- Lógica de navegación y guiado del robot.
+---
+
+### `yolobot`
+
+Paquete encargado del sistema de percepción visual basado en YOLO. Contiene:
+
+- Nodo `yolo_detector`.
+- Modelo entrenado (`.pt`).
+---
+
+### `YOLO_training`
+
+Directorio que contiene todo el código y recursos utilizados durante el entrenamiento de los modelos de detección:
+El modelo finalmente utilizado en el proyecto fue sacado del entrenamiento mediante este archivo:
+```text
+YOLO_training/entrenamiento_final.py
+```
+---
+
+### `real_robot`
+
+Directorio con algunas configuraciones sobre el TurtleBot 4 Lite real y códigos utilizados. Incluye:
+
+- `robot_guia_beep.py`, encargado de integrar señales acústicas con el sistema de navegación y guiado para asistir al usuario.
+- Configuraciones específicas necesarias para el funcionamiento sobre el robot físico.
+- Mapas realizados mediante SLAM de localizaciones reales.
+
+---
 # Preparación del entorno y ejecución de la simulación
 
 ## Requisitos previos
@@ -20,6 +56,18 @@ Estas restricciones de versión son necesarias para evitar problemas de compatib
 
 ---
 
+## Compilación del proyecto
+
+Tras clonar el repositorio, es necesario compilar los paquetes ROS2:
+
+```bash
+cd ~/ros2_ws
+
+colcon build --packages-select \
+turtlebot4_guidance_system \
+yolobot \
+--symlink-install
+```
 ## Preparación del entorno ROS 2
 
 Es necesario añadir las siguientes líneas al archivo `~/.bashrc`:
