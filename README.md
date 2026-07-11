@@ -1,4 +1,5 @@
 # Sistema-para-mapeo-de-interiores-y-asistencia-en-la-navegacion-mediante-TurtleBot-4-TFG
+Repositorio del proyecto de desarrollo e integración de un sistema autónomo de navegación y percepción visual para el TurtleBot 4 Lite. Incluye el entorno virtual, el sistema de guiado e interfaz de usuario, el nodo de detección mediante YOLO y los modelos entrenados para la detección de señales para la integración total en simulación y configuraciones adicionales para un despliegue parcial en el robot real.
 ## Estructura del repositorio
 ### `turtlebot4_guidance_system`
 
