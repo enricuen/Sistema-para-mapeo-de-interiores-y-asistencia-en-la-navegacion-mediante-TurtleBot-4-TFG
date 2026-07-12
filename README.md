@@ -91,7 +91,7 @@ source ~/ros2_ws/install/setup.bash
 
 ### Ejecución completa
 
-#### Terminal 1
+# Terminal 1
 
 ```bash
 ros2 run rmw_zenoh_cpp rmw_zenohd
@@ -112,5 +112,8 @@ Este lanzamiento inicializa automáticamente:
 - RViz2.
 - Visualización de las imágenes de la cámara y la detección con `rqt_image_view`
 - La interfaz gráfica del sistema de guiado.
+
+  
+###<img width="1848" height="1046" alt="cerradaportada" src="https://github.com/user-attachments/assets/369e1d99-9f74-402a-ab4d-4535b9b05183" />
 
 ---
